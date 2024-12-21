@@ -1,19 +1,18 @@
-/*  your css code here. If applicable */
-#container{
-	margin:20px;
-	
-}
-#container p::after{
-	content:" After Element ";
-	color:#f00;
-	font-size:20px;
+#container {
+    margin: 20px;
+    position: relative; /* Ensure the pseudo-elements are positioned relative to the container */
 }
 
-#container p::before{
-	content:"Before Element ";
-	color:#f00;
-	font-size:20px;
+#container::before {
+    content: "Before Element";
+    color: #f00; /* Red color */
+    font-size: 20px;
+    display: block; /* Ensure it's displayed above the container */
 }
 
-
-
+#container::after {
+    content: "After Element";
+    color: #f00; /* Red color */
+    font-size: 20px;
+    display: block; /* Ensure it's displayed below the container */
+}
